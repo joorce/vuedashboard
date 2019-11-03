@@ -124,7 +124,7 @@ export default {
           },
           currency: "BTC",
           balance: "0.00816117",
-          "reserved in orders": "0.00097036"
+          // "reserved in orders": "0.00097036"
         },
         {
           username: {
@@ -134,13 +134,13 @@ export default {
           },
           currency: "ETH",
           balance: "3.16117008",
-          "reserved in orders": "1.70360009"
+          // "reserved in orders": "1.70360009"
         },
         {
           username: { name: "Tomaslau", image: "user-4.jpg", since: "2011" },
           currency: "EUR",
           balance: "25.08",
-          "reserved in orders": "12.58"
+          // "reserved in orders": "12.58"
         },
         {
           username: {
@@ -150,7 +150,7 @@ export default {
           },
           currency: "CNY",
           balance: "82",
-          "reserved in orders": "30.83"
+          // "reserved in orders": "30.83"
         },
         {
           username: {
@@ -161,7 +161,7 @@ export default {
 
           currency: "BTC",
           balance: "2.00816117",
-          "reserved in orders": "1.00097036"
+          // "reserved in orders": "1.00097036"
         }
       ],
 

@@ -17,18 +17,18 @@
         <tr v-for="data in tableData" :key="data[0]">
           <td class="border-t px-4 py-4">
             <div class="flex">
-              <img class="rounded-full w-10 h-10 block" :src="`assets/${data.username.image}`" />
-              <div class="pl-5">
+              <img class="rounded-full w-10 h-10 hidden sm:block" :src="`assets/${data.username.image}`" />
+              <div class="sm:pl-5">
                 <span
                   class="inline-block uppercase text-xs bg-teal-400 font-semibold px-2 text-white rounded-full tracking-wide"
                 >{{data.username.since}}</span>
-                <p>{{data.username.name}}</p>
+                <p class="text-sm sm:text-base">{{data.username.name}}</p>
               </div>
             </div>
           </td>
-          <td class="border-t px-4 py-4 text-center">{{data.currency}}</td>
-          <td class="border-t px-4 py-4 text-right">{{data.balance}} </td>
-          <td class="border-t px-4 py-4 text-right">{{data['reserved in orders']}}</td>
+          <td class="border-t px-4 py-4 text-center text-sm sm:text-base">{{data.currency}}</td>
+          <td class="border-t px-4 py-4 text-right text-sm sm:text-base">{{data.balance}} </td>
+          <td class="border-t px-4 py-4 text-right text-sm sm:text-base hidden">{{data['reserved in orders']}}</td>
           <td class="border-t px-4 py-4">
             <div class="text-center py-1 flex">
               <div

@@ -60,8 +60,8 @@ export default {
       this.isTooltipVisible = true;
       this.tooltipText = evt.target.getAttributeNS(null, "data-value");
       let tooltipElement = document.getElementById("tooltip");
-      let mouseX = evt.clientX;
-      let mouseY = evt.clientY;
+      let mouseX = evt.pageX;
+      let mouseY = evt.pageY;
       tooltipElement.style = `display: block; position: absolute; top: ${mouseY}px; left: ${mouseX}px`;
     },
     onMouseLeave() {

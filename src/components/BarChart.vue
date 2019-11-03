@@ -4,10 +4,10 @@
       <h1 class="mt-2 mb-4 mx-4 font-semibold">{{title}}</h1>
     </div>
     <div id="barchart" class="_bg-gray-200 mt-16 flex flex-grow">
-      <svg id="svg" class="mx-auto w-48 h-56" overflow="visible" @mouseleave="onMouseLeave">
+      <svg id="svg" class="mx-auto w-48 h-56 md:64"  overflow="visible" @mouseleave="onMouseLeave">
         <g v-for="(val,i) in values" :key="i">
           <rect
-            class="tooltip-trigger fill-current text-blue-500 hover:text-blue-300 transition-all"
+            class="tooltip-trigger fill-current text-blue-500 hover:text-blue-300 transition-color"
             :height="val['height']"
             :data-value="val['value']"
             y="0"
@@ -62,17 +62,23 @@ export default {
     },
     translateChart() {
       let barElement = document.getElementById("barchart");
-      let height = barElement.offsetHeight - (4*16);
+      let height = barElement.offsetHeight - 4 * 8;
       return `translate(0,${height}) scale(1,-1)`;
       // return `translate(0,256) scale(1,-1)`
+    },
+    positionBars() {
+      const bars = document.querySelectorAll("svg rect");
+      bars.forEach(bar => {
+        bar.setAttribute("transform", this.translateChart());
+      });
     },
     onMouseMove(evt) {
       this.isTooltipVisible = true;
       this.tooltipText = evt.target.getAttributeNS(null, "data-value");
       let tooltipElementCSS = document.getElementById("tooltip-css");
 
-      let mouseX = evt.clientX;
-      let mouseY = evt.clientY;
+      let mouseX = evt.pageX;
+      let mouseY = evt.pageY;
       tooltipElementCSS.style = `display: block; position: absolute; top: ${mouseY}px; left: ${mouseX}px`;
     },
     onMouseLeave() {
@@ -80,10 +86,10 @@ export default {
     }
   },
   mounted() {
-    const bars = document.querySelectorAll("svg rect");
-    bars.forEach(bar => {
-      bar.setAttribute("transform", this.translateChart());
+    window.addEventListener("resize", () => {
+      this.positionBars();
     });
+    this.positionBars();
   },
   created() {
     this.values = this.data["values"].map(val => {
@@ -99,5 +105,8 @@ export default {
 <style scoped>
 .transition-all {
   transition: all 0.15s ease;
+}
+.transition-color {
+  transition: color 0.15s ease;
 }
 </style>
