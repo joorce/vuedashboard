@@ -29,7 +29,7 @@
     </div>
     <div id="info" class="text-center mt-8 text-gray-500 px-4 lg:px-16">
       <p class="font-semibold">Total sales made today</p>
-      <p class="font-bold ml-2 text-2xl text-gray-800 tracking-tight">$178</p>
+      <p class="font-bold ml-2 text-2xl text-gray-800 tracking-tight">178€</p>
       <p
         class="mt-3 leading-tight"
       >Traditional heading elements are designed to work best in the meat of your page content.</p>

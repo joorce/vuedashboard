@@ -14,25 +14,25 @@
       ></simple-card>
       <simple-card
         icon="globe"
-        currentGoal="5235"
-        goal="7000"
-        subtext="Total sales"
+        currentGoal="1576"
+        goal="2500"
+        subtext="Monthly sales"
         color="#ED8936"
         class="mx-2 mt-4 bg-white md:w-1/2"
       ></simple-card>
       <simple-card
         icon="heart"
-        currentGoal="5235"
-        goal="7000"
-        subtext="Total sales"
+        currentGoal="178"
+        goal="250"
+        subtext="Available Stores"
         color="#ED64A6"
         class="mx-2 mt-4 bg-white md:w-1/2"
       ></simple-card>
       <simple-card
         icon="time"
-        currentGoal="5235"
-        goal="7000"
-        subtext="Total sales"
+        currentGoal="8947"
+        goal="9000"
+        subtext="Payouts"
         color="#38B2AC"
         class="mx-2 mt-4 bg-white md:w-1/2"
       ></simple-card>
@@ -58,7 +58,7 @@
         class="w-full mx-2 mt-2 md:w-full bg-white"
         :tableData="userTableData"
         title="Top 5 Users Balances"
-        :align="{'username': 'center','currency': 'center','balance': 'right','reserved in orders': 'right',}"
+        :align="{'username': 'left','currency': 'center','balance': 'right','reserved in orders': 'right',}"
       ></user-table>
     </div>
   </div>
@@ -88,17 +88,17 @@ export default {
     return {
       circularChartData: {
         info: {
-          Target: { label: "Target", value: 641, ascending: true },
-          "Last week": { label: "Last week", value: 234, ascending: false },
-          "Last Month": { label: "Last Month", value: 3012, ascending: true }
+          Target: { label: "Target", value: "18k", ascending: true },
+          "Last week": { label: "Last week", value: "3,25k", ascending: false },
+          "Last Month": { label: "Last Month", value: "28k", ascending: true }
         },
         value: "75"
       },
       pieChartData: {
         info: {
-          Target: { label: "Target", value: 641, ascending: true },
-          "Last week": { label: "Last week", value: 234, ascending: false },
-          "Last Month": { label: "Last Month", value: 3012, ascending: true }
+          Target: { label: "Target", value: "23k", ascending: false },
+          "Last week": { label: "Last week", value: "1,25k", ascending: false },
+          "Last Month": { label: "Last Month", value: "18k", ascending: true }
         },
         values: [
           { value: 22.5, color: "#FAF089" },

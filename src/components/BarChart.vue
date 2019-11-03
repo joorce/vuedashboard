@@ -4,7 +4,7 @@
       <h1 class="mt-2 mb-4 mx-4 font-semibold">{{title}}</h1>
     </div>
     <div id="barchart" class="_bg-gray-200 mt-16 flex flex-grow">
-      <svg id="svg" class="mx-auto w-48 h-56 md:64"  overflow="visible" @mouseleave="onMouseLeave">
+      <svg id="svg" class="mx-auto w-48 h-56 md:64" overflow="visible" @mouseleave="onMouseLeave">
         <g v-for="(val,i) in values" :key="i">
           <rect
             class="tooltip-trigger fill-current text-blue-500 hover:text-blue-300 transition-color"

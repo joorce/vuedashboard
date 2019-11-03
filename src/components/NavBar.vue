@@ -10,7 +10,7 @@
           @click="isOpen = !isOpen"
           class="block text-gray-500 focus:text-white focus:outline-none hover:text-white transition-all"
         >
-          <svg class="w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+          <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
             <path
               v-if="isOpen"
               d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"
@@ -25,13 +25,17 @@
       :class="isOpen ? 'block' : 'hidden'"
     >
       <a
-        class="block px-2 py-1 text-white font-semibold hover:bg-gray-700 transition-all"
+        class="block px-2 py-1 text-gray-200 font-semibold hover:bg-gray-700 transition-all"
         href="#"
-      >Dashboard 1</a>
+      >Sales</a>
       <a
-        class="block mt-1 sm:mt-0 sm:ml-2 px-2 py-1 text-white font-semibold hover:bg-gray-700 transition-all"
+        class="block mt-1 sm:mt-0 sm:ml-2 px-2 py-1 text-gray-200 font-semibold hover:bg-gray-700 transition-all"
         href="#"
-      >Dashboard 2</a>
+      >Income</a>
+      <a
+        class="block mt-1 sm:mt-0 sm:ml-2 px-2 py-1 text-gray-200 font-semibold hover:bg-gray-700 transition-all"
+        href="#"
+      >Settings</a>
     </div>
   </header>
 </template>

@@ -8,7 +8,7 @@
             v-for="header in headers"
             :key="header"
             :class="alignment(header)"
-            class="border-t border-b-2 px-4 py-4"
+            class="border-t border-b-2 px-4 py-4 capitalize"
           >{{header}}</th>
         </tr>
       </thead>
