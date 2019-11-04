@@ -29,8 +29,8 @@
           <td class="border-t px-4 py-4 text-center text-sm sm:text-base">{{data.currency}}</td>
           <td class="border-t px-4 py-4 text-right text-sm sm:text-base">{{data.balance}} </td>
           <td class="border-t px-4 py-4 text-right text-sm sm:text-base hidden">{{data['reserved in orders']}}</td>
-          <td class="border-t px-4 py-4">
-            <div class="text-center py-1 flex">
+          <td class="border-t px-4 py-4 ">
+            <div class="text-center py-1 flex justify-center">
               <div
                 class="group pl-3 pr-2 py-1 border border-r-0 rounded-l-full hover:bg-green-500 transition-all"
               >
